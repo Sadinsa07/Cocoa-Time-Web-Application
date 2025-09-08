@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Rashi Online Clothing Shop</title>
+    <script type="text/javascript">
+	   function doValidation(){
+
+            if(document.LoginForm.username.value==""){
+                alert("Please Enter Your Name")
+                return false;
+            }
+            if(document.LoginForm.userpassword.value ==""){
+                alert("Please Enter Your Password")
+                return false;
+            }
+            return true;
+        }     
+
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <div class="logo">
+            <i class="fa-solid fa-cookie-bite"></i> Cocoa Time
+        </div>
+
+
+        <div class="nav-buttons">
+
+        <!-- Navigation Buttons 
+        <button class="nav-button" onclick="navigateTo('home')" title="Home">
+            <i class="fas fa-home"></i> Home
+        </button>-->
+        <div class="nav-dropdown">
+            <button class="nav-button" onclick="window.location.href='#';" title="Shop Now">
+                <i class="fas fa-shopping-bag"></i> Shop Now
+            </button>
+        </div>
+
+       <!-- <button class="nav-button" onclick="navigateTo('myorder')" title="My Order">
+            <i class="fas fa-box"></i> My Order
+        </button> -->
+       <button class="nav-button" onclick="window.location.href='../about/about-us.html';" title="About Us">
+            <i class="fas fa-info-circle"></i> About
+        </button> 
+        <!--<button class="nav-button" onclick="navigateTo('cart')" title="My Cart">
+            <i class="fas fa-shopping-cart"></i> My Cart
+        </button> -->
+        <button class="nav-button" onclick="window.location.href='../Signup/singup.html';" title="Sign Up">
+            <i class="fas fa-user-circle"></i> Sign-up
+        </button>
+        </div>
+    </nav>
+
+    <!-- Login Form Section -->
+    <div class="login-page">
+        <div class="login-form">
+
+            <h2 class="login-title">Sign In</h2>
+            <p class="login-description">Please enter your credentials to log in</p>
+
+            <!-- Login Form -->
+                <div class="input-group">
+                    <form class="form-container" action="login.php" method="POST" onsubmit="return doValidation()">
+                        <label for="uname">User Name</label>
+                    <input type="text" id="txt" name="uname" placeholder="Enter your User Name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <button type="submit" class="login-button">Log In</button>
+            </form>
+
+            <div class="forgot-password">
+                <a href="#" class="forgot-link">Forgot Password?</a>
+            </div>
+
+            <div class="signup-link">
+                <p>Don't have an account? <a href="../SignUp/singup.html">Sign Up</a></p>
+            </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            alert("You are going to the " + page + " page.");
+        }            
+
+        
+    </script>
+</body>
+
+
+<script>
+
+
+function doValidation() {
+    const username = document.getElementById("txt").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    if (username === "") {
+        alert("Please enter your username.");
+        return false;
+    }
+
+    if (password === "") {
+        alert("Please enter your password.");
+        return false;
+    }
+
+    /*if (password.length < 6) {
+        alert("Password should be at least 6 characters long.");
+        return false;
+    }*/
+
+    return true;
+}
+
+function navigateTo(page) {
+    alert("You are going to the " + page + " page.");
+}
+
+</script>
+
+</html>

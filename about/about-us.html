@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Cocoa Time</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <!-- Cocoa Time Logo/Text -->
+        <div class="logo">
+            <i class="fa-solid fa-cookie-bite"></i> Cocoa Time
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button class="nav-button" onclick="window.location.href='../home/home.html';" title="Home">
+            <i class="fas fa-home"></i> Home
+        </button>
+        <button class="nav-button" onclick="window.location.href='../chocolates/chocos.html';" title="Shop Now">
+            <i class="fas fa-shopping-bag"></i> Shop Now
+        </button>
+        <button class="nav-button" onclick="window.location.href='../chocolates/cart.html';" title="My Order">
+            <i class="fas fa-box"></i> My Order
+        </button>
+        <button class="nav-button" onclick="window.location.href='about-us.html';" title="About Us">
+            <i class="fas fa-info-circle"></i> About
+        </button>
+        <button class="nav-button" onclick="window.location.href='../chocolates/cart.html';" title="My Cart">
+            <i class="fas fa-shopping-cart"></i> My Cart
+        </button>
+        <button class="nav-button" onclick="window.location.href='../login/login.html';" title="Sign In">
+            <i class="fas fa-user-circle"></i> Sign In
+        </button>
+    </nav>
+
+    <!-- Info Page Content -->
+    <div class="info-container">
+        <div class="info-content">
+            <!-- About Us Section -->
+            <section class="info-section">
+                <h2>About Us</h2>
+                <p>
+                    Welcome to <strong>Cocoa Time</strong>, your ultimate destination for all things chocolate! 
+                    We are passionate about delivering the finest cocoa-based products, crafted with love and care. 
+                    From rich, dark chocolates to creamy milk chocolates, we bring you a world of indulgence.
+                </p>
+                <p>
+                    Our journey began with a simple mission: to spread joy through chocolate. 
+                    Whether you're celebrating a special occasion or simply treating yourself, 
+                    Cocoa Time is here to make every moment sweeter.
+                </p>
+            </section>
+
+            <!-- Our Mission Section -->
+            <section class="info-section">
+                <h2>Our Mission</h2>
+                <p>
+                    At Cocoa Time, our mission is to create high-quality, ethically sourced chocolates 
+                    that delight your taste buds and warm your heart. We believe in sustainability 
+                    and work closely with cocoa farmers to ensure fair practices and environmental responsibility.
+                </p>
+                <p>
+                    Every bite of our chocolate is a testament to our commitment to quality, 
+                    innovation, and the joy of sharing.
+                </p>
+            </section>
+
+            <!-- Contact Information Section -->
+            <section class="info-section">
+                <h2>Contact Us</h2>
+                <p>
+                    Have questions or feedback? We'd love to hear from you! 
+                    Reach out to us via email, phone, or visit our store.
+                </p>
+                <ul class="contact-list">
+                    <li><i class="fas fa-envelope"></i> Email: <a href="mailto:cocoatime@cocoatime.com">info@cocoatime.com</a></li>
+                    <li><i class="fas fa-phone"></i> Phone: +94 71 407 1958</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Address: Matara</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        function navigateTo(page) {
+           // alert("You are going to the " + page + " page.");
+            // Add navigation logic here (e.g., window.location.href = page + ".html";)
+        }
+    </script>
+</body>
+</html>

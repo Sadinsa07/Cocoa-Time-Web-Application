@@ -1,0 +1,185 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(180deg, #6d4c41, #bcaaa4); /* Chocolate gradient */
+    color: #5d4037; /* Warm chocolate text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    display: flex;
+    justify-content: space-between; /* Space between logo and buttons */
+    align-items: center; /* Vertically center items */
+    background-color: #5d4037; /* Warm Chocolate */
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Logo/Text (Non-clickable) */
+.logo {
+    display: flex;
+    align-items: center;
+    color: #ffebcd; /* Light cocoa color */
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px; /* Add some left margin for spacing */
+}
+
+.logo i {
+    margin-right: 8px;
+}
+
+/* Navigation Buttons Container */
+.nav-buttons {
+    display: flex;
+    gap: 15px; /* Space between buttons */
+    margin-right: 20px; /* Add some right margin for spacing */
+}
+
+/* Navigation Button Styling */
+.nav-button {
+    background-color: #5d4037;
+    color: #ffebcd;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-button:hover {
+    background-color: #8d6e63; /* Lighter Chocolate */
+    transform: scale(1.05);
+}
+
+/* Login Page Styling */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 80px; /* Offset for fixed nav */
+}
+
+.login-form {
+    background-color: #fffbf0; /* Creamy white */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+}
+
+/* Title and Description */
+.login-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e76f51; /* Light orange accent */
+    margin-bottom: 20px;
+}
+
+.login-description {
+    font-size: 16px;
+    color: #5d4037; /* Chocolate text color */
+    margin-bottom: 30px;
+}
+
+/* Form Styling */
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 16px;
+    color: #5d4037; /* Chocolate label color */
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.input-group input {
+    font-size: 16px;
+    padding: 12px;
+    border: 1px solid #8d6e63; /* Chocolate border */
+    border-radius: 10px;
+    outline: none;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.input-group input:focus {
+    border-color: #d7ccc8; /* Soft beige on focus */
+}
+
+/* Login Button */
+.login-button {
+    background-color: #5d4037; /* Warm chocolate */
+    color: #ffebcd; /* Creamy button text */
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.login-button:hover {
+    background-color: #8d6e63; /* Lighter chocolate */
+    transform: scale(1.05);
+}
+
+/* Forgot Password and Sign Up Links */
+.forgot-password {
+    margin-top: 10px;
+}
+
+.forgot-link {
+    font-size: 14px;
+    color: #5d4037; /* Chocolate color */
+    text-decoration: none;
+}
+
+.forgot-link:hover {
+    color: #8d6e63; /* Lighter chocolate on hover */
+}
+
+.signup-link {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.signup-link a {
+    color: #5d4037; /* Chocolate text */
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    color: #8d6e63; /* Lighter chocolate on hover */
+}

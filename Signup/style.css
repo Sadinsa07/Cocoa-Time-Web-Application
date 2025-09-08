@@ -1,0 +1,150 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(180deg, #3e2723, #8d6e63, #d7ccc8); /* Dark to light chocolate */
+    color: #4e342e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-color: #5d4037; /* Warm Chocolate */
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Logo/Text (Non-clickable) */
+.logo {
+    display: flex;
+    align-items: center;
+    color: #ffebcd; /* Light cocoa color */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo i {
+    margin-right: 8px;
+}
+
+/* Navigation Button Styling */
+.nav-button {
+    background-color: #5d4037;
+    color: #ffebcd;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-button:hover {
+    background-color: #8d6e63; /* Lighter Chocolate */
+    transform: scale(1.05);
+}
+
+/* Sign-Up Page Styling */
+.sign-up-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #6d4c41, #bcaaa4);
+    padding-top: 80px;
+}
+
+.sign-up-form {
+    background-color: #fffbf0; /* Creamy white */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+.sign-up-form h2 {
+    font-size: 28px;
+    color: #5d4037;
+    margin-bottom: 10px;
+}
+
+.sign-up-form p {
+    font-size: 16px;
+    color: #5d4037;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #5d4037;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #8d6e63;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #5d4037;
+    background-color: #f5ebe0; /* Soft beige */
+}
+
+.form-group input:focus {
+    border-color: #d7ccc8;
+    outline: none;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #5d4037;
+    color: #ffebcd;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #8d6e63;
+}
+
+/* Links */
+.sign-up-form p a {
+    color: #5d4037;
+    text-decoration: none;
+}
+
+.sign-up-form p a:hover {
+    text-decoration: underline;
+}

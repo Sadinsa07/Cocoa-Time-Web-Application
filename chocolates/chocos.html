@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Link Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <!-- Logo/Text (Non-clickable) -->
+        <div class="logo">
+            <i class="fas fa-cookie-bite"></i> Cocoa Time
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button class="nav-button" onclick="window.location.href='../home/home.html';" title="Home">
+            <i class="fas fa-home"></i> Home
+        </button>
+        <div class="nav-dropdown">
+            <button class="nav-button" onclick="window.location.href='chocos.html';" title="Shop Now">
+                <i class="fas fa-shopping-bag"></i> Shop Now
+            </button>
+            <div class="dropdown-content">
+                <a href="" onclick="window.location.href='chocos.html';">Chocolate Bar</a>
+                <a href="chocos.html" onclick="">Chocolate Drinks</a>
+            </div>
+        </div>
+        <button class="nav-button" onclick="" title="My Order">
+            <i class="fas fa-box"></i> My Order
+        </button>
+        <button class="nav-button" onclick="window.location.href='../about/about-us.html';" title="About Us">
+            <i class="fas fa-info-circle"></i> About
+        </button>
+        <button class="nav-button" onclick="window.location.href='cart.html';" title="My Cart">
+            <i class="fas fa-shopping-cart"></i> My Cart
+        </button>
+        <button class="nav-button" onclick="window.location.href='../login/login.html';" title="Sign In">
+            <i class="fas fa-user-circle"></i> Sign-in
+        </button>
+        <script>
+            function navigateTo(page) {
+               
+            }
+        </script>
+           
+        </div>
+    </nav>
+
+    <div class="product-container">
+        <h1>Chocolate bars 🍫</h1>
+        <div class="product-grid">
+            <!-- Repeat this block for each product -->
+            <div class="product-card">
+                <img src="darkchoco.jpg" alt="Product 1">
+                <h3>Dark Chocolate </h3>
+                <p>Rs.1200.00</p>
+                <button class="add-to-cart-btn"onclick="openCartModal( 'Dark Chocolate', 1200)">Add to Cart</button>
+                <button class="buy-now-btn"onclick="openbuyModal('Dark Chocolate', 1200)">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="whitechoco.jpg" alt="Product 2">
+                <h3>White Chocolate</h3>
+                <p>Rs.2000.00</p>
+                <button class="add-to-cart-btn" onclick="openCartModal('White Chocolate', 2000)">Add to Cart</button>
+                <button class="buy-now-btn"onclick="openbuyModal('White Chocolate', 2000)">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="milkchoco.jpg" alt="Product 3">
+                <h3>Milk Chocolate</h3>
+                <p>Rs.1000.00</p>
+                <button class="add-to-cart-btn" onclick="openCartModal('Milk Chocolate', 1000)">Add to Cart</button>
+                <button class="buy-now-btn"onclick="openbuyModal('Milk Chocolate', 1000)">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="cashewchoco.jpg" alt="Product 4">
+                <h3>CashewNut Chocolate</h3>
+                <p>Rs.2200.00</p>
+                <button class="add-to-cart-btn" onclick="openCartModal('Cashew Chocolate', 2200)">Add to Cart</button>
+                <button class="buy-now-btn"onclick="openbuyModal('Cashew Chocolate', 2200)">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="caramelchoco.jpg" alt="Product 5">
+                <h3>Caramel Chocolate</h3>
+                <p>Rs.2100.00</p>
+                <button class="add-to-cart-btn" onclick="openCartModal('Caramel Chocolate', 2100)">Add to Cart</button>
+                <button class="buy-now-btn"onclick="openbuyModal('Caramel Chocolate', 2100)">Buy Now</button>
+            </div>
+            <div class="product-card">
+                <img src="hazelnutchoco.jpg" alt="Product 6">
+                <h3>HazelNut Chocolate</h3>
+                <p>Rs.2500.00</p>
+                <button class="add-to-cart-btn" onclick="openCartModal('HazelNut Chocolate', 2500)">Add to Cart</button>
+                <button class="buy-now-btn"onclick="openbuyModal('HazelNut Chocolate', 2500)">Buy Now</button>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <script>
+        function navigateTo(page) {
+            alert("You are going to the " + page + " page.");
+        }
+    </script>
+
+    <!-- Cart Modal -->
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCartModal()">&times;</span>
+        <h2>Add to Cart</h2>
+
+        <p id="product-name"></p>
+        <p>Price per item: Rs.<span id="product-price"></span></p>
+
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" value="1" min="1" onchange="updateTotal()">
+
+        <p>Total Price: Rs.<span id="total-price"></span></p>
+
+        <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+    </div>
+</div>
+
+
+    <script>
+       let productPrice = 0;
+
+function openCartModal(name, price) {
+    document.getElementById("product-name").innerText = name;
+    document.getElementById("product-price").innerText = price;
+    document.getElementById("total-price").innerText = price;
+    productPrice = price;
+    document.getElementById("cartModal").style.display = "block";
+}
+
+function closeCartModal() {
+    document.getElementById("cartModal").style.display = "none";
+}
+
+function updateTotal() {
+    const quantity = document.getElementById("quantity").value;
+    document.getElementById("total-price").innerText = productPrice * quantity;
+}
+
+function addToCart() {
+    const quantity = document.getElementById("quantity").value;
+    const totalPrice = productPrice * quantity;
+
+    if (!quantity) {
+        alert("Please select a quantity.");
+        return;
+    }
+
+    // Create an object to store the cart data (without username)
+    const cartData = {
+        productName: document.getElementById("product-name").innerText,
+        quantity,
+        totalPrice
+    };
+
+    // Display success message
+    alert("Added to cart successfully!");
+
+    // Send the data to the server using AJAX (you can use fetch or XMLHttpRequest)
+    fetch('addto-cart.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(cartData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Handle the server response here (optional)
+        console.log('Success:', data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+
+    closeCartModal();
+}
+
+
+
+    </script>
+<div id="buyModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closebuyModal()">&times;</span>
+        <h2>Buy Now</h2>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter your name" required>
+
+        <p id="product-name-buy"></p>
+        <p>Price per item: Rs.<span id="product-price-buy"></span></p>
+
+        <label for="quantity-buy">Quantity:</label>
+        <input type="number" id="quantity-buy" value="1" min="1" onchange="updateBuyTotal()">
+
+        <p>Total Price: Rs.<span id="total-price-buy"></span></p>
+
+        <button class="add-to-cart-btn" onclick="buynow()">Order Now</button>
+    </div>
+</div>
+<script>
+    let productPrice1 = 0;
+
+    function openbuyModal(name, price) {
+        document.getElementById("product-name").innerText = name;
+        document.getElementById("product-price").innerText = price;
+        document.getElementById("total-price").innerText = price;
+        productPrice = price;
+        document.getElementById("buyModal").style.display = "block";
+    }
+
+    function closebuyModal() {
+        document.getElementById("buyModal").style.display = "none";
+    }
+
+    function updateTotal() {
+        const quantity = document.getElementById("quantity").value;
+        document.getElementById("total-price").innerText = productPrice * quantity;
+    }
+
+    function buynow() {
+        const username = document.getElementById("username").value;
+        const color = document.querySelector('input[name="color"]:checked')?.value;
+        const size = document.querySelector('input[name="size"]:checked')?.value;
+        const quantity = document.getElementById("quantity").value;
+        const totalPrice = productPrice * quantity;
+
+        if (!username || !color || !size) {
+            alert("Please fill in all fields.");
+            return;
+        }
+
+        // Display success message
+        alert("Your Order successfully!");
+
+        // Replace this console log with a function to store data in a database
+        console.log({
+            username,
+            productName: document.getElementById("product-name").innerText,
+            color,
+            size,
+            quantity,
+            totalPrice
+        });
+
+        closeCartModal();
+    }
+</script>
+</body>
+</html>
