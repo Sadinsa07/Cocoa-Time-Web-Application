@@ -585,10 +585,10 @@ For questions, suggestions, or support:
 
 ## 📊 Project Statistics
 
-![GitHub repo size](https://img.shields.io/github/repo-size/yourusername/Cocoa-Time-Web-Application)
-![GitHub contributors](https://img.shields.io/github/contributors/yourusername/Cocoa-Time-Web-Application)
-![GitHub stars](https://img.shields.io/github/stars/yourusername/Cocoa-Time-Web-Application?style=social)
-![GitHub forks](https://img.shields.io/github/forks/yourusername/Cocoa-Time-Web-Application?style=social)
+![GitHub repo size](https://img.shields.io/github/repo-size/sadinsa07/Cocoa-Time-Web-Application)
+![GitHub contributors](https://img.shields.io/github/contributors/sadinsa07/Cocoa-Time-Web-Application)
+![GitHub stars](https://img.shields.io/github/stars/sadinsa07/Cocoa-Time-Web-Application?style=social)
+![GitHub forks](https://img.shields.io/github/forks/sadinsa07/Cocoa-Time-Web-Application?style=social)
 
 ---
 
