@@ -2,8 +2,6 @@ A Cocoa Time - Web Application
 
 A simple, educational web application for a chocolate & cocoa shop built with HTML, CSS, PHP and MySQL. This repository contains the front-end pages, PHP scripts for authentication and shopping cart functionality, and SQL commands for creating the database schema.
 
-A simple, educational web application for a chocolate & cocoa shop built with HTML, CSS, PHP and MySQL. This repository contains the front-end pages, PHP scripts for authentication and shopping cart functionality, and SQL commands for creating the database schema.
-
 ## Quick Summary 🚀
 
 - Language stack: HTML, CSS, PHP (mysqli), MySQL 🍫
